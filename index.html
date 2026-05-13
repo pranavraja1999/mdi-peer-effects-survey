@@ -411,7 +411,7 @@ input[type=range]::-webkit-slider-thumb{
 // ═══════════════════════════════════════════════════════════════════════════
 const CONFIG = {
   // Google Apps Script Web App URL — replace with your deployment URL
-  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbyJFG72ieMR15ofz4jRuoyB39rIYbm8HinDOm1hRroKRizvmol-tPLnPeKEbS3LCGBf1Q/exec",
+  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwRXzbPZx6uybnf_6-kA42f-Qkc462TSkAnY0ltIQQMz07JsYSBss6XbmG2MJqN_C-Fqw/exec",
   STUDY_TITLE: "Investment Decision Study",
   PI: "Dr Puneet Arora",
   INSTITUTION: "Management Development Institute Gurgaon",
@@ -531,7 +531,7 @@ function updateAllocTotal(round){
 // DATA SUBMISSION
 // ═══════════════════════════════════════════════════════════════════════════
 async function saveData(payload){
-  if(!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("YOUR_SCRIPT_ID")){
+  if(!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbwRXzbPZx6uybnf_6-kA42f-Qkc462TSkAnY0ltIQQMz07JsYSBss6XbmG2MJqN_C-Fqw/exec")){
     console.warn("No Google Script URL configured — data not saved");
     return;
   }
