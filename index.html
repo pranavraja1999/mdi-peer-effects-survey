@@ -531,20 +531,25 @@ function updateAllocTotal(round){
 // DATA SUBMISSION
 // ═══════════════════════════════════════════════════════════════════════════
 async function saveData(payload){
-  if(!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbyJFG72ieMR15ofz4jRuoyB39rIYbm8HinDOm1hRroKRizvmol-tPLnPeKEbS3LCGBf1Q/exec")){
+  if(!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("YOUR_SCRIPT_ID")){
     console.warn("No Google Script URL configured — data not saved");
     return;
   }
-  document.getElementById("loading").style.display="flex";
+  // Use URL parameters via GET — avoids all CORS preflight issues with Apps Script
   try{
-    await fetch(CONFIG.SCRIPT_URL, {
-      method:"POST",
-      mode:"no-cors",
-      headers:{"Content-Type":"application/json"},
-      body: JSON.stringify(payload)
-    });
+    const params = new URLSearchParams({ data: JSON.stringify(payload) });
+    const url    = CONFIG.SCRIPT_URL + "?" + params.toString();
+    // Use an invisible image trick — fully CORS-free, no preflight
+    const img = new Image();
+    img.src = url;
+    // Also try fetch in no-cors mode as backup
+    fetch(CONFIG.SCRIPT_URL, {
+      method:  "POST",
+      mode:    "no-cors",
+      headers: {"Content-Type":"text/plain"},
+      body:    JSON.stringify(payload)
+    }).catch(()=>{});
   } catch(e){ console.error("Save error:", e); }
-  finally{ document.getElementById("loading").style.display="none"; }
 }
 
 async function saveBlock(blockName, data){
