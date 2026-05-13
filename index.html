@@ -1,0 +1,1587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    span.s1 {font: 12.0px Helvetica}
+    span.s2 {font: 13.0px 'Helvetica Neue'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;MDI Gurgaon — Investment Decision Study&lt;/title&gt;</p>
+<p class="p1">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">/* ── Reset &amp; Variables ─────────────────────────────────────────────────── */</p>
+<p class="p1">*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}</p>
+<p class="p1">:root{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--navy: <span class="Apple-converted-space">    </span>#1B2A4A;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--navy-mid: #243656;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--amber:<span class="Apple-converted-space">    </span>#D4891A;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--amber-lt: #FDF3DC;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--white:<span class="Apple-converted-space">    </span>#FFFFFF;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--off:<span class="Apple-converted-space">      </span>#F7F8FA;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--slate:<span class="Apple-converted-space">    </span>#64748B;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--light:<span class="Apple-converted-space">    </span>#E2E8F0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--dark: <span class="Apple-converted-space">    </span>#1E293B;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--red:<span class="Apple-converted-space">      </span>#C0392B;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--green:<span class="Apple-converted-space">    </span>#1A7A44;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--mid:<span class="Apple-converted-space">      </span>#94A3B8;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--radius: <span class="Apple-converted-space">  </span>10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--shadow: <span class="Apple-converted-space">  </span>0 4px 24px rgba(27,42,74,0.10);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--font-h: <span class="Apple-converted-space">  </span>'Libre Baskerville', Georgia, serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--font-b: <span class="Apple-converted-space">  </span>'DM Sans', sans-serif;</p>
+<p class="p1">}</p>
+<p class="p1">html{scroll-behavior:smooth}</p>
+<p class="p1">body{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:var(--font-b);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--off);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>min-height:100vh;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:15px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height:1.6;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Layout ────────────────────────────────────────────────────────────── */</p>
+<p class="p1">.shell{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width:740px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:0 16px 60px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Progress ──────────────────────────────────────────────────────────── */</p>
+<p class="p1">.progress-wrap{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:sticky;top:0;z-index:100;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--navy);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;align-items:center;gap:14px;</p>
+<p class="p1">}</p>
+<p class="p1">.progress-bar{flex:1;height:4px;background:rgba(255,255,255,0.2);border-radius:2px}</p>
+<p class="p1">.progress-fill{height:100%;background:var(--amber);border-radius:2px;transition:width 0.5s ease}</p>
+<p class="p1">.progress-label{font-size:12px;color:rgba(255,255,255,0.7);white-space:nowrap;font-family:var(--font-b)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Cards ─────────────────────────────────────────────────────────────── */</p>
+<p class="p1">.card{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow:var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:32px 36px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top:28px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid var(--light);</p>
+<p class="p1">}</p>
+<p class="p1">.card-header{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;align-items:center;gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom:22px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding-bottom:16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-bottom:2px solid var(--amber);</p>
+<p class="p1">}</p>
+<p class="p1">.block-badge{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--navy);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:10px;font-weight:600;letter-spacing:0.08em;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:4px 10px;border-radius:20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>white-space:nowrap;font-family:var(--font-b);text-transform:uppercase;</p>
+<p class="p1">}</p>
+<p class="p1">.card-title{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:var(--font-h);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:18px;color:var(--navy);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Section headings ──────────────────────────────────────────────────── */</p>
+<p class="p1">.section-label{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:11px;font-weight:600;letter-spacing:0.07em;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-transform:uppercase;color:var(--amber);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:24px 0 8px;font-family:var(--font-b);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Questions ─────────────────────────────────────────────────────────── */</p>
+<p class="p1">.q-block{margin-bottom:24px}</p>
+<p class="p1">.q-label{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:14.5px;font-weight:500;color:var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom:10px;line-height:1.55;</p>
+<p class="p1">}</p>
+<p class="p1">.q-num{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--amber);color:var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:11px;font-weight:600;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:2px 7px;border-radius:4px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-right:8px;vertical-align:middle;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:var(--font-b);</p>
+<p class="p1">}</p>
+<p class="p1">.q-note{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:12px;color:var(--slate);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-style:italic;margin-top:4px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Text inputs ───────────────────────────────────────────────────────── */</p>
+<p class="p1">input[type=text],input[type=number],select,textarea{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width:100%;padding:10px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1.5px solid var(--light);border-radius:8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:var(--font-b);font-size:14px;color:var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition:border-color 0.2s,box-shadow 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>outline:none;</p>
+<p class="p1">}</p>
+<p class="p1">input[type=text]:focus,input[type=number]:focus,select:focus,textarea:focus{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-color:var(--amber);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow:0 0 0 3px rgba(212,137,26,0.15);</p>
+<p class="p1">}</p>
+<p class="p1">input[type=number]{-moz-appearance:textfield}</p>
+<p class="p1">input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Radio / Checkbox options ──────────────────────────────────────────── */</p>
+<p class="p1">.options{display:flex;flex-direction:column;gap:8px;margin-top:8px}</p>
+<p class="p1">.opt{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;align-items:flex-start;gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:10px 14px;border-radius:8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1.5px solid var(--light);cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition:all 0.15s;font-size:14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--white);</p>
+<p class="p1">}</p>
+<p class="p1">.opt:hover{border-color:var(--amber);background:var(--amber-lt)}</p>
+<p class="p1">.opt.selected{border-color:var(--amber);background:var(--amber-lt)}</p>
+<p class="p1">.opt input{margin-top:2px;flex-shrink:0;accent-color:var(--amber)}</p>
+<p class="p1">.opt-text{line-height:1.4;color:var(--dark)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Matrix table ──────────────────────────────────────────────────────── */</p>
+<p class="p1">.matrix-wrap{overflow-x:auto;margin-top:8px}</p>
+<p class="p1">.matrix{width:100%;border-collapse:collapse;font-size:13px}</p>
+<p class="p1">.matrix th{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--navy);color:var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:8px 6px;text-align:center;font-weight:600;font-size:12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid var(--navy-mid);</p>
+<p class="p1">}</p>
+<p class="p1">.matrix th.stmt-col{text-align:left;width:45%}</p>
+<p class="p1">.matrix td{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:9px 6px;border:1px solid var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align:center;vertical-align:middle;</p>
+<p class="p1">}</p>
+<p class="p1">.matrix td.stmt{text-align:left;padding-left:10px;font-size:13px;line-height:1.4}</p>
+<p class="p1">.matrix tr:nth-child(even) td{background:var(--off)}</p>
+<p class="p1">.matrix tr:hover td{background:rgba(212,137,26,0.06)}</p>
+<p class="p1">.matrix td input[type=radio]{accent-color:var(--amber);width:16px;height:16px;cursor:pointer}</p>
+<p class="p1">.rev-tag{font-size:10px;color:var(--red);margin-left:4px;font-style:italic}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Allocation inputs ─────────────────────────────────────────────────── */</p>
+<p class="p1">.alloc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}</p>
+<p class="p1">.alloc-item{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--off);border:1.5px solid var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:8px;padding:12px 14px;</p>
+<p class="p1">}</p>
+<p class="p1">.alloc-asset-name{font-weight:600;font-size:13.5px;color:var(--navy);margin-bottom:2px}</p>
+<p class="p1">.alloc-asset-sub{font-size:11.5px;color:var(--slate);margin-bottom:8px}</p>
+<p class="p1">.alloc-item input{margin-top:0}</p>
+<p class="p1">.alloc-total{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top:12px;padding:12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:8px;background:var(--off);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1.5px solid var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;justify-content:space-between;align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:14px;font-weight:500;</p>
+<p class="p1">}</p>
+<p class="p1">.alloc-total-val{font-size:16px;font-weight:700}</p>
+<p class="p1">.alloc-ok{color:var(--green)}</p>
+<p class="p1">.alloc-err{color:var(--red)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── HL / LA table ─────────────────────────────────────────────────────── */</p>
+<p class="p1">.task-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}</p>
+<p class="p1">.task-table th{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--navy);color:var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:9px 10px;font-size:12px;font-weight:600;border:1px solid var(--navy-mid);</p>
+<p class="p1">}</p>
+<p class="p1">.task-table td{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:9px 10px;border:1px solid var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>vertical-align:middle;text-align:center;</p>
+<p class="p1">}</p>
+<p class="p1">.task-table tr:nth-child(even) td{background:var(--off)}</p>
+<p class="p1">.task-table td.row-label{font-weight:600;color:var(--navy);width:50px}</p>
+<p class="p1">.task-table td.prob{color:var(--slate);font-size:12.5px}</p>
+<p class="p1">.task-table td input[type=radio]{accent-color:var(--amber);width:16px;height:16px;cursor:pointer}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Slider ────────────────────────────────────────────────────────────── */</p>
+<p class="p1">.slider-wrap{margin-top:12px}</p>
+<p class="p1">.slider-val-display{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:32px;font-weight:700;color:var(--navy);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:var(--font-h);margin-bottom:8px;</p>
+<p class="p1">}</p>
+<p class="p1">.slider-val-display span{font-size:16px;font-weight:400;color:var(--slate)}</p>
+<p class="p1">input[type=range]{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width:100%;height:6px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>-webkit-appearance:none;appearance:none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--light);border-radius:3px;cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>accent-color:var(--amber);</p>
+<p class="p1">}</p>
+<p class="p1">input[type=range]::-webkit-slider-thumb{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>-webkit-appearance:none;appearance:none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width:22px;height:22px;border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--amber);cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow:0 2px 8px rgba(212,137,26,0.4);</p>
+<p class="p1">}</p>
+<p class="p1">.slider-ends{display:flex;justify-content:space-between;font-size:11.5px;color:var(--slate);margin-top:6px}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Info boxes ────────────────────────────────────────────────────────── */</p>
+<p class="p1">.info-box{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--off);border-left:4px solid var(--navy);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:0 8px 8px 0;padding:12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:12px 0;font-size:13.5px;color:var(--dark);line-height:1.6;</p>
+<p class="p1">}</p>
+<p class="p1">.warn-box{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--amber-lt);border-left:4px solid var(--amber);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:0 8px 8px 0;padding:12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:12px 0;font-size:13.5px;color:var(--dark);line-height:1.6;</p>
+<p class="p1">}</p>
+<p class="p1">.error-box{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:#fdf0ef;border-left:4px solid var(--red);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:0 8px 8px 0;padding:12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:12px 0;font-size:13.5px;color:var(--red);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight:500;display:none;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Asset / Instruction table ─────────────────────────────────────────── */</p>
+<p class="p1">.inst-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}</p>
+<p class="p1">.inst-table th{background:var(--navy);color:var(--white);padding:8px 10px;font-size:12px;border:1px solid var(--navy-mid)}</p>
+<p class="p1">.inst-table td{padding:8px 10px;border:1px solid var(--light);vertical-align:middle}</p>
+<p class="p1">.inst-table tr:nth-child(even) td{background:var(--off)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Peer card ─────────────────────────────────────────────────────────── */</p>
+<p class="p1">.peer-card{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--off);border:1.5px solid var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:10px;padding:14px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;align-items:center;gap:14px;margin-bottom:16px;</p>
+<p class="p1">}</p>
+<p class="p1">.peer-avatar{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width:44px;height:44px;border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--navy);color:var(--amber);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;align-items:center;justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight:700;font-size:15px;font-family:var(--font-h);flex-shrink:0;</p>
+<p class="p1">}</p>
+<p class="p1">.peer-info{font-size:13px}</p>
+<p class="p1">.peer-name{font-weight:600;color:var(--navy)}</p>
+<p class="p1">.peer-sub{color:var(--slate);font-size:12px}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Treatment boxes ───────────────────────────────────────────────────── */</p>
+<p class="p1">.treatment-box{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:10px;padding:16px 20px;margin-bottom:14px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1.5px solid var(--light);</p>
+<p class="p1">}</p>
+<p class="p1">.treatment-box.luck{background:#FFF9E6;border-color:#E8A020}</p>
+<p class="p1">.treatment-box.skill{background:#EBF5FF;border-color:#2E75B6}</p>
+<p class="p1">.treatment-box.control{background:var(--off);border-color:var(--light)}</p>
+<p class="p1">.treatment-label{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:11px;font-weight:700;letter-spacing:0.06em;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-transform:uppercase;margin-bottom:6px;font-family:var(--font-b);</p>
+<p class="p1">}</p>
+<p class="p1">.treatment-box.luck .treatment-label{color:#7A5200}</p>
+<p class="p1">.treatment-box.skill .treatment-label{color:#0C447C}</p>
+<p class="p1">.treatment-box.control .treatment-label{color:var(--slate)}</p>
+<p class="p1">.gap-note{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:rgba(212,137,26,0.12);border-radius:6px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:10px 14px;margin-top:10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:13.5px;font-weight:500;color:var(--dark);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Returns display ───────────────────────────────────────────────────── */</p>
+<p class="p1">.returns-grid{display:grid;gap:16px;margin-top:12px}</p>
+<p class="p1">.return-card{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1.5px solid var(--light);border-radius:10px;overflow:hidden;</p>
+<p class="p1">}</p>
+<p class="p1">.return-card-header{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--navy);color:var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:10px 16px;display:flex;justify-content:space-between;align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:13px;font-weight:600;</p>
+<p class="p1">}</p>
+<p class="p1">.return-pay-badge{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--amber);color:var(--navy);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;</p>
+<p class="p1">}</p>
+<p class="p1">.return-body{padding:12px 16px}</p>
+<p class="p1">.return-assets{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:12px}</p>
+<p class="p1">.return-asset{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--off);border-radius:6px;padding:8px 6px;text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1px solid var(--light);</p>
+<p class="p1">}</p>
+<p class="p1">.return-asset-name{font-size:11px;font-weight:600;color:var(--navy)}</p>
+<p class="p1">.return-asset-alloc{font-size:12px;color:var(--slate)}</p>
+<p class="p1">.return-asset-ret{font-size:13px;font-weight:700}</p>
+<p class="p1">.ret-pos{color:var(--green)}</p>
+<p class="p1">.ret-neg{color:var(--red)}</p>
+<p class="p1">.ret-zero{color:var(--slate)}</p>
+<p class="p1">.return-summary{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;justify-content:space-between;align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:10px 14px;border-radius:8px;background:var(--off);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1.5px solid var(--light);font-size:14px;</p>
+<p class="p1">}</p>
+<p class="p1">.return-total{font-size:18px;font-weight:700;font-family:var(--font-h)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Navigation ────────────────────────────────────────────────────────── */</p>
+<p class="p1">.nav-row{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;justify-content:space-between;align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top:28px;padding-top:20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-top:1.5px solid var(--light);</p>
+<p class="p1">}</p>
+<p class="p1">.btn{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:11px 26px;border-radius:8px;font-size:14px;font-weight:600;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor:pointer;border:1.5px solid;transition:all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:var(--font-b);</p>
+<p class="p1">}</p>
+<p class="p1">.btn-secondary{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-color:var(--light);background:var(--white);color:var(--slate);</p>
+<p class="p1">}</p>
+<p class="p1">.btn-secondary:hover{background:var(--off);border-color:var(--slate)}</p>
+<p class="p1">.btn-primary{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-color:var(--amber);background:var(--amber);color:var(--white);</p>
+<p class="p1">}</p>
+<p class="p1">.btn-primary:hover{background:#b8750f;border-color:#b8750f}</p>
+<p class="p1">.btn-primary:disabled{opacity:0.5;cursor:not-allowed}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Cover / Thank you ─────────────────────────────────────────────────── */</p>
+<p class="p1">.cover{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>min-height:100vh;background:var(--navy);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;flex-direction:column;align-items:center;justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:40px 24px;text-align:center;</p>
+<p class="p1">}</p>
+<p class="p1">.cover-logo{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:var(--font-h);font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--amber);letter-spacing:0.1em;text-transform:uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom:40px;</p>
+<p class="p1">}</p>
+<p class="p1">.cover-title{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:var(--font-h);font-size:clamp(22px,4vw,34px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--white);line-height:1.3;margin-bottom:12px;max-width:560px;</p>
+<p class="p1">}</p>
+<p class="p1">.cover-sub{font-size:15px;color:rgba(255,255,255,0.65);margin-bottom:36px;max-width:480px;line-height:1.6}</p>
+<p class="p1">.cover-meta{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:grid;grid-template-columns:1fr 1fr;gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>max-width:460px;width:100%;margin-bottom:36px;</p>
+<p class="p1">}</p>
+<p class="p1">.meta-item{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:8px;padding:12px 16px;text-align:left;</p>
+<p class="p1">}</p>
+<p class="p1">.meta-label{font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:2px}</p>
+<p class="p1">.meta-value{font-size:13px;color:var(--white)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Comprehension feedback ────────────────────────────────────────────── */</p>
+<p class="p1">.comp-explanation{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:#fdf0ef;border-left:4px solid var(--red);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:0 8px 8px 0;padding:12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top:10px;font-size:13.5px;color:var(--dark);display:none;</p>
+<p class="p1">}</p>
+<p class="p1">.comp-correct{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:#eaf3de;border-left:4px solid var(--green);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:0 8px 8px 0;padding:12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-top:10px;font-size:13.5px;color:var(--green);display:none;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Loading overlay ───────────────────────────────────────────────────── */</p>
+<p class="p1">.loading{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:fixed;inset:0;background:rgba(27,42,74,0.75);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;align-items:center;justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>z-index:9999;display:none;</p>
+<p class="p1">}</p>
+<p class="p1">.loading-inner{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:var(--white);border-radius:12px;padding:32px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align:center;font-family:var(--font-b);</p>
+<p class="p1">}</p>
+<p class="p1">.spinner{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width:40px;height:40px;border:3px solid var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-top-color:var(--amber);border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>animation:spin 0.8s linear infinite;margin:0 auto 14px;</p>
+<p class="p1">}</p>
+<p class="p1">@keyframes spin{to{transform:rotate(360deg)}}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ── Responsive ────────────────────────────────────────────────────────── */</p>
+<p class="p1">@media(max-width:600px){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.card{padding:20px 18px}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.alloc-grid{grid-template-columns:1fr}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cover-meta{grid-template-columns:1fr}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.return-assets{grid-template-columns:repeat(3,1fr)}</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="loading" id="loading"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="loading-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="spinner"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="font-size:14px;color:var(--slate)"&gt;Saving your response…&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- All sections hidden by default; JS shows one at a time --&gt;</p>
+<p class="p1">&lt;div id="app"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// CONFIGURATION — edit these before deploying</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">const CONFIG = {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Google Apps Script Web App URL — replace with your deployment URL</p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>SCRIPT_URL: "https://script.google.com/macros/s/<a href="https://script.google.com/macros/s/AKfycbyJFG72ieMR15ofz4jRuoyB39rIYbm8HinDOm1hRroKRizvmol-tPLnPeKEbS3LCGBf1Q/exec"><span class="s2">AKfycbyJFG72ieMR15ofz4jRuoyB39rIYbm8HinDOm1hRroKRizvmoltPLnPeKEbS3LCGBf1Q</span></a>/exec",</span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>STUDY_TITLE: "Investment Decision Study",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>PI: "Dr Puneet Arora",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>INSTITUTION: "Management Development Institute Gurgaon",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>CONTACT: "puneet.arora@mdi.ac.in",</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// ASSET PARAMETERS</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">const ASSETS = {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cash: { label:"Cash",<span class="Apple-converted-space">    </span>mean:0,<span class="Apple-converted-space">  </span>sd:0, <span class="Apple-converted-space">  </span>desc:"Guaranteed 0% return", <span class="Apple-converted-space">                  </span>ret:"0%",<span class="Apple-converted-space">    </span>risk:"None"<span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>L:<span class="Apple-converted-space">    </span>{ label:"Asset L", mean:5,<span class="Apple-converted-space">  </span>sd:2.5, desc:"Govt. bonds / short-duration debt funds", ret:"~5%", <span class="Apple-converted-space">  </span>risk:"±2.5%"<span class="Apple-converted-space">  </span>},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>M:<span class="Apple-converted-space">    </span>{ label:"Asset M", mean:10, sd:7, <span class="Apple-converted-space">  </span>desc:"Large-cap equity index funds",<span class="Apple-converted-space">            </span>ret:"~10%",<span class="Apple-converted-space">  </span>risk:"±7%"<span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>H:<span class="Apple-converted-space">    </span>{ label:"Asset H", mean:17, sd:14,<span class="Apple-converted-space">  </span>desc:"Small-cap equity",<span class="Apple-converted-space">                        </span>ret:"~17%",<span class="Apple-converted-space">  </span>risk:"±14%" <span class="Apple-converted-space">  </span>},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>V:<span class="Apple-converted-space">    </span>{ label:"Asset V", mean:25, sd:28,<span class="Apple-converted-space">  </span>desc:"Derivatives / speculative products",<span class="Apple-converted-space">      </span>ret:"~25%",<span class="Apple-converted-space">  </span>risk:"±28%" <span class="Apple-converted-space">  </span>},</p>
+<p class="p1">};</p>
+<p class="p1">const ENDOWMENT <span class="Apple-converted-space">  </span>= 10000;</p>
+<p class="p1">const PEER_RETURN = 40;</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// STATE</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">const state = {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>section: <span class="Apple-converted-space">      </span>"cover",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>condition: <span class="Apple-converted-space">    </span>null,<span class="Apple-converted-space">          </span>// Control | Luck | Skill | LuckReflect</p>
+<p class="p1"><span class="Apple-converted-space">  </span>conditionNum:<span class="Apple-converted-space">  </span>null,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>compAttempts:<span class="Apple-converted-space">  </span>0,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>compQuestion:<span class="Apple-converted-space">  </span>1, <span class="Apple-converted-space">            </span>// 1,2,3</p>
+<p class="p1"><span class="Apple-converted-space">  </span>currentRound:<span class="Apple-converted-space">  </span>1,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>payRound:<span class="Apple-converted-space">      </span>null,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>answers: <span class="Apple-converted-space">      </span>{},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>allocs:<span class="Apple-converted-space">        </span>{ R1:{cash:0,L:0,M:0,H:0,V:0}, R2:{cash:0,L:0,M:0,H:0,V:0}, R3:{cash:0,L:0,M:0,H:0,V:0} },</p>
+<p class="p1"><span class="Apple-converted-space">  </span>returns: <span class="Apple-converted-space">      </span>{},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>pid: <span class="Apple-converted-space">          </span>null,<span class="Apple-converted-space">          </span>// unique participant ID</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// UTILITIES</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">function uid(){ return "P_" + Date.now() + "_" + Math.random().toString(36).slice(2,7).toUpperCase(); }</p>
+<p class="p2"><br></p>
+<p class="p1">function randNormal(mean, sd){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(sd === 0) return mean;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let u1=0, u2=0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>while(u1===0) u1=Math.random();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>while(u2===0) u2=Math.random();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return mean + sd * Math.sqrt(-2*Math.log(u1)) * Math.cos(2*Math.PI*u2);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function calcReturn(alloc){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const total = Object.values(alloc).reduce((a,b)=&gt;a+b,0) || ENDOWMENT;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let portfolio = 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const breakdown = {};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for(const [key, asset] of Object.entries(ASSETS)){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const weight = (alloc[key]||0) / total;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const draw <span class="Apple-converted-space">  </span>= randNormal(asset.mean, asset.sd);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>breakdown[key] = { weight, draw, amt: alloc[key]||0 };</p>
+<p class="p1"><span class="Apple-converted-space">    </span>portfolio += weight * draw;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return { portfolio, breakdown };</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function fmt(n){ return (n&gt;=0?"+":"")+n.toFixed(1)+"%" }</p>
+<p class="p1">function fmtINR(n){ return "₹"+Math.round(n).toLocaleString("en-IN") }</p>
+<p class="p2"><br></p>
+<p class="p1">function randomCondition(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const arms = ["Control","Luck","Skill","LuckReflect"];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const idx<span class="Apple-converted-space">  </span>= Math.floor(Math.random()*4);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.condition<span class="Apple-converted-space">    </span>= arms[idx];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.conditionNum = idx+1;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function randomPayRound(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.payRound = Math.floor(Math.random()*3)+1;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function show(id){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll(".section").forEach(s=&gt;s.style.display="none");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const el = document.getElementById(id);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(el){ el.style.display="block"; window.scrollTo({top:0,behavior:"smooth"}); }</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function progress(pct){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelector(".progress-fill").style.width = pct+"%";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelector(".progress-label").textContent = Math.round(pct)+"% complete";</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function getChecked(name){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const el = document.querySelector(`input[name="${name}"]:checked`);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return el ? el.value : null;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function getAlloc(round){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const keys = ["cash","L","M","H","V"];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const alloc = {};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>keys.forEach(k =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const el = document.getElementById(`${round}_${k}`);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alloc[k] = el ? (parseFloat(el.value)||0) : 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return alloc;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function allocTotal(alloc){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return Object.values(alloc).reduce((a,b)=&gt;a+b,0);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function updateAllocTotal(round){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const alloc = getAlloc(round);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const total = allocTotal(alloc);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const el<span class="Apple-converted-space">    </span>= document.getElementById(`total_${round}`);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ok<span class="Apple-converted-space">    </span>= total === ENDOWMENT;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>el.innerHTML = `Total: &lt;span class="alloc-total-val ${ok?"alloc-ok":"alloc-err"}"&gt;${fmtINR(total)} / ${fmtINR(ENDOWMENT)}&lt;/span&gt; ${ok?"✓":"— must equal ₹10,000"}`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return ok;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// DATA SUBMISSION</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">async function saveData(payload){</p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">  </span>if(!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("<a href="https://script.google.com/macros/s/AKfycbyJFG72ieMR15ofz4jRuoyB39rIYbm8HinDOm1hRroKRizvmol-tPLnPeKEbS3LCGBf1Q/exec"><span class="s2">AKfycbyJFG72ieMR15ofz4jRuoyB39rIYbm8HinDOm1hRroKRizvmoltPLnPeKEbS3LCGBf1Q</span></a>")){</span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>console.warn("No Google Script URL configured — data not saved");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("loading").style.display="flex";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>try{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>await fetch(CONFIG.SCRIPT_URL, {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>method:"POST",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>mode:"no-cors",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>headers:{"Content-Type":"application/json"},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>body: JSON.stringify(payload)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} catch(e){ console.error("Save error:", e); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>finally{ document.getElementById("loading").style.display="none"; }</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">async function saveBlock(blockName, data){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>await saveData({</p>
+<p class="p1"><span class="Apple-converted-space">    </span>pid: <span class="Apple-converted-space">        </span>state.pid,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>timestamp: <span class="Apple-converted-space">  </span>new Date().toISOString(),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>condition: <span class="Apple-converted-space">  </span>state.condition,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>conditionNum:state.conditionNum,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block: <span class="Apple-converted-space">      </span>blockName,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>payRound:<span class="Apple-converted-space">    </span>state.payRound,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>...data</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// RENDERING ENGINE</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">const app = document.getElementById("app");</p>
+<p class="p2"><br></p>
+<p class="p1">function render(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>app.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="progress-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="progress-bar"&gt;&lt;div class="progress-fill" style="width:0%"&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="progress-label"&gt;0% complete&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="shell" id="sections-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- sections injected here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>renderSection(state.section);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function renderSection(sec){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const wrap = document.getElementById("sections-wrap");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fns<span class="Apple-converted-space">  </span>= {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cover:<span class="Apple-converted-space">        </span>renderCover,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>consent:<span class="Apple-converted-space">      </span>renderConsent,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block0: <span class="Apple-converted-space">      </span>renderBlock0,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block1: <span class="Apple-converted-space">      </span>renderBlock1,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block2: <span class="Apple-converted-space">      </span>renderBlock2,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block3: <span class="Apple-converted-space">      </span>renderBlock3,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block4: <span class="Apple-converted-space">      </span>renderBlock4,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block5: <span class="Apple-converted-space">      </span>renderBlock5,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block6: <span class="Apple-converted-space">      </span>renderRound.bind(null,1),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block7: <span class="Apple-converted-space">      </span>renderRound.bind(null,2),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block8: <span class="Apple-converted-space">      </span>renderBlock8,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block9: <span class="Apple-converted-space">      </span>renderRound.bind(null,3),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block10:<span class="Apple-converted-space">      </span>renderBlock10,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>block11:<span class="Apple-converted-space">      </span>renderBlock11,</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(fns[sec]) wrap.innerHTML = fns[sec]();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>attachHandlers(sec);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// COVER</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderCover(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="cover" id="sec-cover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cover-logo"&gt;Management Development Institute Gurgaon&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="cover-title"&gt;Investment Decision Study&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="cover-sub"&gt;A research study on how people make financial decisions. Your participation helps us understand retail investor behaviour in India.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="cover-meta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="meta-item"&gt;&lt;div class="meta-label"&gt;Duration&lt;/div&gt;&lt;div class="meta-value"&gt;25 – 30 minutes&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="meta-item"&gt;&lt;div class="meta-label"&gt;Incentive&lt;/div&gt;&lt;div class="meta-value"&gt;₹750 – ₹1,250&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="meta-item"&gt;&lt;div class="meta-label"&gt;Principal Investigator&lt;/div&gt;&lt;div class="meta-value"&gt;Dr Puneet Arora&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="meta-item"&gt;&lt;div class="meta-label"&gt;Pre-registered&lt;/div&gt;&lt;div class="meta-value"&gt;AEA RCT Registry&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn btn-primary" onclick="goConsent()" style="padding:13px 36px;font-size:15px"&gt;Begin Study →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// CONSENT</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderConsent(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(4);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-consent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Consent&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Participant Information &amp; Consent&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;What is this study about?&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>This study looks at how people make investment decisions. You will allocate a virtual amount of money across different investment options in multiple rounds. Some of your decisions are linked to real monetary payments.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;What will I be asked to do?&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>You will complete a short background questionnaire, read some information about another participant's outcomes, and then make a series of investment decisions. The survey takes approximately 25 to 30 minutes.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Will I be paid?&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Yes. One of your investment rounds will be randomly selected for actual payment (₹500 – ₹1,000). You will also receive payments for two short incentivised tasks. Total expected earnings are ₹750 to ₹1,250, paid electronically within one week.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Is my participation voluntary?&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Yes. You may withdraw at any time without penalty. Your academic standing will not be affected in any way.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Will my responses be confidential?&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Yes. Your name and roll number are collected only to confirm eligibility and will be stored separately from your survey responses. All data used in research will be anonymised.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block" style="margin-top:24px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q&lt;/span&gt;By selecting 'I agree' below, you confirm that you have read the above information, you are 18 years of age or older, and you voluntarily agree to participate.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="opt" onclick="selectOpt(this,'consent_agree','1')"&gt;&lt;input type="radio" name="consent_agree" value="1"&gt;&lt;span class="opt-text"&gt;I agree to participate&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="opt" onclick="selectOpt(this,'consent_agree','2')"&gt;&lt;input type="radio" name="consent_agree" value="2"&gt;&lt;span class="opt-text"&gt;I do not wish to participate&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="err-consent" class="error-box"&gt;Please make a selection to continue.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitConsent()"&gt;Continue →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 0 — ELIGIBILITY</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderBlock0(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(8);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Eligibility Check&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q0&lt;/span&gt;Are you currently enrolled in an MBA or senior undergraduate business program at one of the participating institutions?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="opt" onclick="selectOpt(this,'eligible','1')"&gt;&lt;input type="radio" name="eligible" value="1"&gt;&lt;span class="opt-text"&gt;Yes — I am currently enrolled&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="opt" onclick="selectOpt(this,'eligible','2')"&gt;&lt;input type="radio" name="eligible" value="2"&gt;&lt;span class="opt-text"&gt;No — I do not qualify&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="err-block0" class="error-box"&gt;Please make a selection to continue.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('consent')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitBlock0()"&gt;Continue →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 1 — DEMOGRAPHICS</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">const STATES = ["Andaman &amp; Nicobar Islands","Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chandigarh","Chhattisgarh","Dadra &amp; Nagar Haveli and Daman &amp; Diu","Delhi (NCT)","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu &amp; Kashmir","Jharkhand","Karnataka","Kerala","Ladakh","Lakshadweep","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Puducherry","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"];</p>
+<p class="p2"><br></p>
+<p class="p1">function renderBlock1(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(14);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const stateOpts = STATES.map(s=&gt;`&lt;option value="${s}"&gt;${s}&lt;/option&gt;`).join("");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 1&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;About You&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-note" style="margin-bottom:16px"&gt;Your name and roll number are collected solely to confirm that participation does not affect your academic standing. They are stored separately from your responses.&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>${textQ("Q1.1","What is your full name?","b1_name","text")}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${textQ("Q1.2","What is your institute roll number?","b1_roll","text")}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${textQ("Q1.3","What is your age?","b1_age","number","e.g. 23")}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q1.4&lt;/span&gt;What gender do you identify as?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("b1_gender",[["1","Male"],["2","Female"],["3","Non-binary / third gender"],["4","Prefer not to say"]])}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q1.5&lt;/span&gt;What is your state / union territory of birth?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;select id="b1_state"&gt;&lt;option value=""&gt;— Select —&lt;/option&gt;${stateOpts}&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q1.6&lt;/span&gt;What is your family's approximate annual income?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("b1_income",[</p>
+<p class="p1"><span class="Apple-converted-space">        </span>["1","₹0 – ₹2,50,000"],["2","₹2,50,001 – ₹5,00,000"],["3","₹5,00,001 – ₹7,50,000"],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>["4","₹7,50,001 – ₹10,00,000"],["5","₹10,00,001 – ₹12,50,000"],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>["6","₹12,50,001 – ₹15,00,000"],["7","Above ₹15,00,000"]</p>
+<p class="p1"><span class="Apple-converted-space">      </span>])}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q1.7&lt;/span&gt;What is your current level of education?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("b1_edu",[["1","Pursuing Under Graduation"],["2","Finished Under Graduation"],["3","Pursuing Post Graduation"],["4","Finished Post Graduation"]])}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q1.8&lt;/span&gt;What course are you currently enrolled in?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("b1_course",[["1","PGDM"],["2","PGDM HR"],["3","PGDM Business Analytics"],["4","PGDM IB"],["5","Other"]])}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q1.9&lt;/span&gt;Which qualifying exam did you use for admission?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("b1_exam",[["1","CAT"],["2","GMAT"],["3","Other / Direct Admission"]])}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="cat-block" style="display:none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${textQ("Q1.10","What was your CAT percentile?","b1_cat","number","e.g. 97.5")}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="gmat-block" style="display:none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${textQ("Q1.11","What was your GMAT score?","b1_gmat","number","e.g. 720")}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q1.12&lt;/span&gt;Have you taken any finance courses in your previous or current degree?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("b1_finance",[["1","Yes"],["2","No"]])}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q1.13&lt;/span&gt;Do you currently invest in the stock market, equity, or mutual funds?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("b1_invest",[["1","Yes"],["2","No"]])}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="err-block1" class="error-box"&gt;Please complete all required fields before continuing.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('block0')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitBlock1()"&gt;Continue →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 2 — FINANCIAL LITERACY + ATTENTION</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderBlock2(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(22);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const flQs = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{id:"fl1", q:"Priya kept ₹1,00,000 in cash under her mattress for 10 years. Ravi puts the same amount in a savings account earning 6% per year. After 10 years, who has more money?",</p>
+<p class="p1"><span class="Apple-converted-space">     </span>opts:[["A","Priya, because cash is safest"],["B","Ravi, because money in the bank earns interest"],["C","They have the same amount"],["D","Cannot be determined"]]},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{id:"fl2", q:"Ananya has ₹10,000 to invest. Her friend says: 'Put it all in one company's stock — that's how you get rich fast.' What is the main risk of this advice?",</p>
+<p class="p1"><span class="Apple-converted-space">     </span>opts:[["A","She will definitely lose all her money"],["B","If that one company does badly, she loses everything with no backup"],["C","Stocks always go down in value"],["D","She needs at least ₹1 lakh to invest in stocks"]]},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{id:"fl3", q:"Shreya invests ₹5,000 every month into a fund, no matter whether the market is up or down. What is this strategy called and what is its main advantage?",</p>
+<p class="p1"><span class="Apple-converted-space">     </span>opts:[["A","Market timing — she buys at the best possible price each month"],["B","Regular fixed investing — she automatically buys more units when prices are low and fewer when prices are high"],["C","Short selling — she profits when prices fall"],["D","Hedging — she protects against all losses"]]},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{id:"fl4", q:"Vikram bought shares in a company two years ago. The company has just declared that it will pay ₹15 per share as a cash payment to all shareholders. What is this payment called?",</p>
+<p class="p1"><span class="Apple-converted-space">     </span>opts:[["A","A loan repayment"],["B","A brokerage fee"],["C","A dividend"],["D","A tax refund"]]},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{id:"fl5", q:"Neha is choosing between two funds over 10 years. Fund A charges 2% per year; Fund B charges 0.2%. Both funds invest in identical assets. Which fund will leave Neha with more money?",</p>
+<p class="p1"><span class="Apple-converted-space">     </span>opts:[["A","Fund A, because higher fees mean better management"],["B","Fund B, because lower fees mean more of her returns stay with her"],["C","They will be equal because the assets are the same"],["D","Fund A, because expensive funds take fewer risks"]]},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const flHTML = flQs.map((q,i)=&gt;`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q2.${i+1}&lt;/span&gt;${q.q}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts(`fl${i+1}`, q.opts)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;`).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 2&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Financial Knowledge &amp; Attention&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Financial Literacy&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${flHTML}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="margin-top:28px"&gt;Attention Check&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q2.6&lt;/span&gt;This question checks that you are reading carefully. Please select &lt;strong&gt;"Somewhat agree"&lt;/strong&gt; as your response.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("att",[["1","Strongly disagree"],["2","Disagree"],["3","Somewhat disagree"],["4","Somewhat agree"],["5","Agree"],["6","Strongly agree"]])}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="err-block2" class="error-box"&gt;Please answer all questions before continuing.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('block1')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitBlock2()"&gt;Continue →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 3 — INSTRUCTIONS + PRACTICE + COMPREHENSION</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderBlock3(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(30);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const assetRows = Object.entries(ASSETS).map(([k,a])=&gt;`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${a.label}&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;${a.desc}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;td style="text-align:center"&gt;${a.ret}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;td style="text-align:center"&gt;${a.risk}&lt;/td&gt;&lt;/tr&gt;`).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 3&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Investment Task Instructions&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;How this works:&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>• You receive a virtual endowment of &lt;strong&gt;₹10,000&lt;/strong&gt; at the start of each round.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>• Allocate it across five investment options — you decide how much goes where.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>• Your allocations must add up to exactly ₹10,000.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>• Each asset has a different expected return and risk level.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>• One round will be randomly selected for your real payment.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Asset Return &amp; Risk Table&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table class="inst-table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Asset&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;th&gt;Expected Return&lt;/th&gt;&lt;th&gt;Risk (Std Dev)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tbody&gt;${assetRows}&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Example Payout&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="warn-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Example:&lt;/strong&gt; If you put ₹5,000 in Asset M (expected +10%, risk ±7%) and ₹5,000 in Cash, and Asset M draws a return of +13.2%, your portfolio return would be:&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>(50% × 13.2%) + (50% × 0%) = &lt;strong&gt;+6.6%&lt;/strong&gt; → ending value = &lt;strong&gt;₹10,660&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="margin-top:24px"&gt;Practice Round&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="font-size:14px;color:var(--slate);margin-bottom:16px"&gt;This round is for practice only — it will not count toward your payment. Allocate ₹10,000 across the five assets below.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="alloc-prac"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${allocBlock("prac")}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="prac-result" style="display:none;margin-top:16px"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn btn-primary" onclick="submitPractice()" style="margin-top:16px" id="prac-btn"&gt;Calculate Practice Return →&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Comprehension check --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="comp-section" style="display:none;margin-top:28px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-label"&gt;Understanding Check&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="warn-box"&gt;Please answer the question below to confirm you understand how returns work. You need to answer correctly to proceed.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="comp-q-wrap"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="err-comp" class="error-box"&gt;Please select an answer.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="comp-explanation" class="comp-explanation"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="comp-correct" class="comp-correct"&gt;✓ Correct! You may proceed.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="nav-row" style="margin-top:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="btn btn-primary" onclick="submitComp()" id="comp-next-btn"&gt;Check Answer →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="err-block3" class="error-box" style="margin-top:12px"&gt;Please complete the practice round first.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row" id="block3-nav" style="display:none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('block2')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="goSection('block4')"&gt;Continue to Study →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 4 — TREATMENT</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderBlock4(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(40);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const peerCard = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="peer-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="peer-avatar"&gt;P42&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="peer-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="peer-name"&gt;Participant P-42&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="peer-sub"&gt;MBA, Second Year · Partner Business School&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>let content = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(state.condition === "Control"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content = `</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${peerCard}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="treatment-box control"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="treatment-label"&gt;Your Peer&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="font-size:14px;color:var(--dark)"&gt;You have been paired with Participant P-42 from a previous session. No information about their investment outcomes is available at this time.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const isLuck = state.condition === "Luck" || state.condition === "LuckReflect";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const cls<span class="Apple-converted-space">    </span>= isLuck ? "luck" : "skill";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const label<span class="Apple-converted-space">  </span>= isLuck ? "Luck Attribution" : "Skill Attribution";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const text <span class="Apple-converted-space">  </span>= isLuck</p>
+<p class="p1"><span class="Apple-converted-space">      </span>? "Participant P-42 earned a return &lt;strong&gt;40 percentage points above the cash benchmark&lt;/strong&gt; in the previous session. This return was the result of a &lt;strong&gt;randomly assigned allocation&lt;/strong&gt; that happened to coincide with favourable random market draws."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>: "Participant P-42 earned a return &lt;strong&gt;40 percentage points above the cash benchmark&lt;/strong&gt; in the previous session. This return was the result of &lt;strong&gt;deliberate analysis and careful asset selection&lt;/strong&gt;. The specific allocation strategy is treated as proprietary and is not disclosed.";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>content = `</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${peerCard}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="treatment-box ${cls}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="treatment-label"&gt;${label}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="font-size:14px;line-height:1.6"&gt;${text}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="gap-note"&gt;If you keep your endowment entirely in cash, your peer will have &lt;strong&gt;outperformed you by 40 percentage points&lt;/strong&gt; in this round.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Reflection prompt for Luck + Reflection arm</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reflHtml = state.condition === "LuckReflect" ? `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="margin-top:24px;padding-top:20px;border-top:1.5px solid var(--light)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-label"&gt;Before You Invest — Your Goals&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;Before you make your investment decisions, please take a moment to think about your own financial goals. Select the &lt;strong&gt;two&lt;/strong&gt; that align most closely with your objectives.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="ref-goals" class="options" style="margin-top:10px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>${["Achieving long-term financial security and retirement readiness","Saving for a major life goal such as education, a home, or family","Preserving capital and avoiding losses","Generating steady, predictable returns","Maximising growth even if it means accepting volatility"]</p>
+<p class="p1"><span class="Apple-converted-space">          </span>.map((g,i)=&gt;`&lt;label class="opt" onclick="toggleGoal(${i},this)"&gt;&lt;input type="checkbox" id="ref_${i}" value="${i}"&gt;&lt;span class="opt-text"&gt;${g}&lt;/span&gt;&lt;/label&gt;`).join("")}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-note"&gt;Please select exactly 2 goals.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="err-ref" class="error-box"&gt;Please select exactly 2 goals.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;` : "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 4&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Your Paired Participant&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${content}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${reflHtml}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('block3')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitBlock4()"&gt;Continue to Risk Task →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 5 — HOLT-LAURY</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderBlock5(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(50);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const probs = ["10% / 90%","20% / 80%","30% / 70%","40% / 60%","50% / 50%","60% / 40%","70% / 30%","80% / 20%","90% / 10%","100% / 0%"];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const aOpts = Array(9).fill("₹200 or ₹160").concat(["₹200 (certain)"]);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const bOpts = Array(9).fill("₹385 or ₹10").concat(["₹385 (certain)"]);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rows = probs.map((p,i)=&gt;`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td class="row-label"&gt;${i+1}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td class="prob"&gt;${p}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;&lt;label style="cursor:pointer"&gt;&lt;input type="radio" name="hl_${i}" value="A"&gt; ${aOpts[i]}&lt;/label&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;&lt;label style="cursor:pointer"&gt;&lt;input type="radio" name="hl_${i}" value="B"&gt; ${bOpts[i]}&lt;/label&gt;&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;`).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 5&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Risk Preference Task&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;For each row, choose between &lt;strong&gt;Option A (safer)&lt;/strong&gt; and &lt;strong&gt;Option B (riskier)&lt;/strong&gt;. The probability of the high payoff increases row by row. &lt;strong&gt;One row will be randomly selected for real payment&lt;/strong&gt; — please choose carefully.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="warn-box"&gt;&lt;strong&gt;Option A (safe):&lt;/strong&gt; High payoff = ₹200, Low payoff = ₹160 &amp;nbsp;|&amp;nbsp; &lt;strong&gt;Option B (risky):&lt;/strong&gt; High payoff = ₹385, Low payoff = ₹10&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table class="task-table" style="margin-top:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;thead&gt;&lt;tr&gt;&lt;th style="width:50px"&gt;Row&lt;/th&gt;&lt;th&gt;Probability&lt;br&gt;High / Low&lt;/th&gt;&lt;th&gt;Option A (Safe)&lt;/th&gt;&lt;th&gt;Option B (Risky)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tbody&gt;${rows}&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="err-block5" class="error-box"&gt;Please answer all 10 rows before continuing.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('block4')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitBlock5()"&gt;Continue →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCKS 6, 7, 9 — INVESTMENT ROUNDS</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderRound(num){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const progs = {1:58, 2:64, 3:74};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(progs[num]);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const next = {1:"block7", 2:"block8", 3:"block10"};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const prev = {1:"block5", 2:"block6", 3:"block9"};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-round${num}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Round ${num} of 3&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Investment Round ${num}&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;Allocate your &lt;strong&gt;₹10,000 endowment&lt;/strong&gt; across the five assets. Allocations must sum to exactly ₹10,000. No outcome information will be shown after this round.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${num !== 1 ? `&lt;div class="warn-box" style="font-size:13px"&gt;Your peer earned a return 40 percentage points above the cash benchmark.&lt;/div&gt;` : ""}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${allocBlock("R"+num)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="err-round${num}" class="error-box"&gt;Your allocations must sum to exactly ₹10,000.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('${prev[num]}')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitRound(${num},'${next[num]}')"&gt;Continue →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 8 — BELIEF ELICITATION</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderBlock8(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(69);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 8&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Your Expectation&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box"&gt;This question is incentivised — &lt;strong&gt;truthful reporting is optimal&lt;/strong&gt;.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q8&lt;/span&gt;On a scale of 0 to 100, what is the probability (in %) that your portfolio return in &lt;strong&gt;Round 3&lt;/strong&gt; will exceed your peer's stated return of +40% above the cash benchmark?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="slider-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slider-val-display" id="slider-display"&gt;50&lt;span&gt;%&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="range" min="0" max="100" value="50" id="belief-slider" oninput="document.getElementById('slider-display').innerHTML=this.value+'&lt;span&gt;%&lt;/span&gt;';state.answers.belief=parseInt(this.value)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slider-ends"&gt;&lt;span&gt;0% — Certainly will NOT exceed&lt;/span&gt;&lt;span&gt;100% — Certainly WILL exceed&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('block7')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitBlock8()"&gt;Continue →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 10 — BFI-10 + SCO + MANIPULATION CHECK</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderBlock10(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(82);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const bfiItems = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… is reserved", rev:true},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… is generally trusting", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… tends to be lazy", rev:true},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… is relaxed, handles stress well", rev:true},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… has few artistic interests", rev:true},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… is outgoing, sociable", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… tends to find fault with others", rev:true},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… does a thorough job", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… gets nervous easily", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"… has an active imagination", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const bfiScale = ["1","2","3","4","5"];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const bfiScaleLbls = ["Disagree strongly","Disagree a little","Neither agree nor disagree","Agree a little","Agree strongly"];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const scoItems = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I often compare how my loved ones are doing with how others are doing.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I always pay a lot of attention to how I do things compared with how others do things.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"If I want to find out how well I have done something, I compare what I have done with how others have done.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I often compare how I am doing socially with other people.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I am not the type of person who compares often with others.", rev:true},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I often compare myself with others with respect to what I have accomplished in life.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I often like to talk with others about mutual opinions and experiences.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I often try to find out what others think who face similar problems as I face.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I always like to know what others in a similar situation would do.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"If I want to learn more about something, I try to find out what others think about it.", rev:false},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{text:"I never consider my situation in life relative to that of other people.", rev:true},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const scoScale = ["1","2","3","4","5"];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const bfiRows = bfiItems.map((item,i)=&gt;`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td class="stmt"&gt;I see myself as someone who ${item.text}${item.rev?`&lt;span class="rev-tag"&gt;(R)&lt;/span&gt;`:""}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${bfiScale.map(v=&gt;`&lt;td&gt;&lt;input type="radio" name="bfi_${i}" value="${v}"&gt;&lt;/td&gt;`).join("")}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;`).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const scoRows = scoItems.map((item,i)=&gt;`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td class="stmt"&gt;${item.text}${item.rev?`&lt;span class="rev-tag"&gt;(R)&lt;/span&gt;`:""}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${scoScale.map(v=&gt;`&lt;td&gt;&lt;input type="radio" name="sco_${i}" value="${v}"&gt;&lt;/td&gt;`).join("")}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;`).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const mcOpts = ["1 — Not at all motivated","2","3","4 — Moderately motivated","5","6","7 — Extremely motivated"];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 10&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Personality &amp; Experience&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Personality — Big Five Inventory (BFI-10)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="q-note" style="margin-bottom:10px"&gt;Adapted from Rammstedt &amp; John (2007). How well do the following statements describe your personality? &amp;nbsp; &lt;em&gt;(R) = reverse-scored&lt;/em&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="matrix-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;table class="matrix"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;thead&gt;&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="stmt-col"&gt;I see myself as someone who …&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>${bfiScaleLbls.map(l=&gt;`&lt;th&gt;${l}&lt;/th&gt;`).join("")}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tbody&gt;${bfiRows}&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="margin-top:28px"&gt;Social Comparison Orientation&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="q-note" style="margin-bottom:10px"&gt;Gibbons &amp; Buunk (1999). Scale: 1 = Strongly disagree → 5 = Strongly agree. &amp;nbsp; &lt;em&gt;(R) = reverse-scored&lt;/em&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="matrix-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;table class="matrix"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;thead&gt;&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th class="stmt-col"&gt;Statement&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>${["1","2","3","4","5"].map(v=&gt;`&lt;th&gt;${v}&lt;/th&gt;`).join("")}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tbody&gt;${scoRows}&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="margin-top:28px"&gt;Manipulation Check&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;MC&lt;/span&gt;How motivated were you to match or exceed the peer's return during the investment rounds?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts("mc1", mcOpts.map((o,i)=&gt;[(i+1).toString(), o]))}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="err-block10" class="error-box"&gt;Please answer all questions before continuing.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-secondary" onclick="goSection('block9')"&gt;← Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn btn-primary" onclick="submitBlock10()"&gt;Continue →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">// BLOCK 11 — RETURNS + THANK YOU</p>
+<p class="p1">// ─────────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function renderBlock11(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>progress(100);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Calculate returns for all 3 rounds</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rounds = [1,2,3].map(n=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const alloc = state.allocs[`R${n}`];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const {portfolio, breakdown} = calcReturn(alloc);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return {n, alloc, portfolio, breakdown};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.returns = rounds;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cardsHTML = rounds.map(r=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const isPay = r.n === state.payRound;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const diff<span class="Apple-converted-space">  </span>= r.portfolio - PEER_RETURN;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const retClass = r.portfolio &gt; 0 ? "ret-pos" : r.portfolio &lt; 0 ? "ret-neg" : "ret-zero";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const assetBoxes = Object.entries(ASSETS).map(([k,a])=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const amt<span class="Apple-converted-space">  </span>= r.alloc[k]||0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const draw = r.breakdown[k]?.draw ?? 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const cls<span class="Apple-converted-space">  </span>= draw &gt; 0 ? "ret-pos" : draw &lt; 0 ? "ret-neg" : "ret-zero";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="return-asset"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="return-asset-name"&gt;${a.label}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="return-asset-alloc"&gt;${fmtINR(amt)}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>${amt&gt;0?`&lt;div class="return-asset-ret ${cls}"&gt;${fmt(draw)}&lt;/div&gt;`:"&lt;div style='font-size:11px;color:var(--mid)'&gt;—&lt;/div&gt;"}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const endVal = ENDOWMENT * (1 + r.portfolio/100);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="return-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="return-card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Round ${r.n}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>${isPay?`&lt;span class="return-pay-badge"&gt;⭐ Payment Round&lt;/span&gt;`:""}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="return-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="return-assets"&gt;${assetBoxes}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="return-summary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;Portfolio return&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="return-total ${retClass}"&gt;${fmt(r.portfolio)}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="return-summary" style="margin-top:8px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;Ending value (₹10,000 → )&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span style="font-weight:600"&gt;${fmtINR(endVal)}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="return-summary" style="margin-top:8px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;vs Peer benchmark (+40%)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span style="font-weight:600;color:${diff&gt;=0?'var(--green)':'var(--red)'}"&gt;${fmt(diff)} ${diff&gt;=0?"▲ Ahead":"▼ Behind"}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const payResult<span class="Apple-converted-space">  </span>= rounds[state.payRound-1];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const payEndVal<span class="Apple-converted-space">  </span>= ENDOWMENT * (1 + payResult.portfolio/100);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card section" id="sec-block11"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="block-badge"&gt;Block 11&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="card-title"&gt;Your Investment Results&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="warn-box" style="margin-bottom:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Payment Round Selected: Round ${state.payRound}&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Your ending value for Round ${state.payRound}: &lt;strong&gt;${fmtINR(payEndVal)}&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Payment will be processed within one week.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="returns-grid"&gt;${cardsHTML}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="margin-top:28px;padding:24px;background:var(--navy);border-radius:12px;text-align:center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3 style="font-family:var(--font-h);color:var(--white);font-size:20px;margin-bottom:10px"&gt;Thank You!&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.7;max-width:480px;margin:0 auto 20px"&gt;Your responses have been recorded. Payment for Round ${state.payRound} will be processed electronically within one week to your registered account.&lt;br&gt;&lt;br&gt;If you have any questions, contact &lt;strong style="color:var(--amber)"&gt;puneet.arora@mdi.ac.in&lt;/strong&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="color:rgba(255,255,255,0.4);font-size:12px"&gt;Participant ID: ${state.pid}&lt;br&gt;Management Development Institute Gurgaon · AEA RCT Registry&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// HELPERS — HTML builders</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">function textQ(qnum, label, id, type="text", placeholder=""){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `&lt;div class="q-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;${qnum}&lt;/span&gt;${label}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="${type}" id="${id}" placeholder="${placeholder}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function radioOpts(name, opts){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>${opts.map(([v,l])=&gt;`&lt;label class="opt" onclick="selectOpt(this,'${name}','${v}')"&gt;&lt;input type="radio" name="${name}" value="${v}"&gt;&lt;span class="opt-text"&gt;${l}&lt;/span&gt;&lt;/label&gt;`).join("")}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function allocBlock(round){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const assets = Object.entries(ASSETS);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const grid <span class="Apple-converted-space">  </span>= assets.map(([k,a])=&gt;`</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="alloc-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="alloc-asset-name"&gt;${a.label}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="alloc-asset-sub"&gt;${a.ret} expected · ${a.risk} risk&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="number" id="${round}_${k}" min="0" max="10000" step="100" placeholder="0"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>oninput="updateAllocTotal('${round}')"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;`).join("");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="alloc-grid"&gt;${grid}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="alloc-total" id="total_${round}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Total: &lt;span class="alloc-total-val alloc-err"&gt;₹0 / ₹10,000&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;`;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function selectOpt(el, name, val){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll(`input[name="${name}"]`).forEach(i=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>i.closest(".opt")?.classList.remove("selected");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>el.classList.add("selected");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>el.querySelector("input").checked = true;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// SECTION TRANSITIONS</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">function goSection(sec){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.section = sec;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>renderSection(sec);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.scrollTo({top:0,behavior:"smooth"});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function goConsent(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.pid = uid();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>randomCondition();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("consent");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// SUBMISSION HANDLERS</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">function submitConsent(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const v = getChecked("consent_agree");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!v){ document.getElementById("err-consent").style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(v==="2"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("sections-wrap").innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card" style="text-align:center;padding:48px 32px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 style="font-family:var(--font-h);color:var(--navy);margin-bottom:12px"&gt;Thank You&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="color:var(--slate)"&gt;You have chosen not to participate. You may close this window.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.answers.consent = v;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("block0");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitBlock0(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const v = getChecked("eligible");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!v){ document.getElementById("err-block0").style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(v==="2"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("sections-wrap").innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card" style="text-align:center;padding:48px 32px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 style="font-family:var(--font-h);color:var(--navy);margin-bottom:12px"&gt;Not Eligible&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="color:var(--slate)"&gt;Thank you for your interest. Only enrolled students at participating institutions are eligible for this study.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.answers.eligible = v;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("block1");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitBlock1(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const required = ["b1_name","b1_roll","b1_age","b1_state"];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const radios <span class="Apple-converted-space">  </span>= ["b1_gender","b1_income","b1_edu","b1_course","b1_exam","b1_finance","b1_invest"];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const errEl<span class="Apple-converted-space">    </span>= document.getElementById("err-block1");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let ok = true;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>required.forEach(id=&gt;{ const el=document.getElementById(id); if(!el||!el.value.trim()) ok=false; });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>radios.forEach(name=&gt;{ if(!getChecked(name)) ok=false; });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!ok){ errEl.style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>errEl.style.display="none";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const d = {};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>required.forEach(id=&gt;d[id]=document.getElementById(id).value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>radios.forEach(name=&gt;d[name]=getChecked(name));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>["b1_cat","b1_gmat"].forEach(id=&gt;{ const el=document.getElementById(id); if(el) d[id]=el.value; });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.answers.block1 = d;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>saveBlock("B1_Demographics", d);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("block2");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitBlock2(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fls<span class="Apple-converted-space">  </span>= [1,2,3,4,5].map(i=&gt;getChecked(`fl${i}`));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const att<span class="Apple-converted-space">  </span>= getChecked("att");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(fls.some(v=&gt;!v)||!att){ document.getElementById("err-block2").style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const d = { fl1:fls[0],fl2:fls[1],fl3:fls[2],fl4:fls[3],fl5:fls[4], att,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fl_score: [fls[0]==="B",fls[1]==="B",fls[2]==="B",fls[3]==="C",fls[4]==="B"].filter(Boolean).length,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>attention_pass: att==="4" ? 1 : 0</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.answers.block2 = d;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>saveBlock("B2_FinLit", d);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("block3");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Comprehension questions</p>
+<p class="p1">const compQs = [</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{q:"Suppose you invest your ₹10,000 entirely in an asset with an average return of 5% and a risk of ±5%. What is the minimum amount you could end up with?",</p>
+<p class="p1"><span class="Apple-converted-space">   </span>opts:[["A","₹9,000"],["B","₹10,000"],["C","₹10,500"],["D","₹11,000"]], correct:"B",</p>
+<p class="p1"><span class="Apple-converted-space">   </span>expl:"The minimum return is 5% − 5% = 0%. So the minimum ending value is ₹10,000 × (1 + 0%) = ₹10,000."},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{q:"Suppose you invest your ₹10,000 entirely in an asset with an average return of 8% and a risk of ±12%. What is the minimum amount you could end up with?",</p>
+<p class="p1"><span class="Apple-converted-space">   </span>opts:[["A","₹8,000"],["B","₹9,600"],["C","₹10,800"],["D","₹12,000"]], correct:"B",</p>
+<p class="p1"><span class="Apple-converted-space">   </span>expl:"The minimum return is 8% − 12% = −4%. So the minimum ending value is ₹10,000 × (1 − 4%) = ₹9,600."},</p>
+<p class="p1"><span class="Apple-converted-space">  </span>{q:"Suppose you invest your ₹10,000 entirely in an asset with an average return of 6% and a risk of ±4%. What is the minimum amount you could end up with?",</p>
+<p class="p1"><span class="Apple-converted-space">   </span>opts:[["A","₹9,800"],["B","₹10,000"],["C","₹10,200"],["D","₹10,600"]], correct:"C",</p>
+<p class="p1"><span class="Apple-converted-space">   </span>expl:"The minimum return is 6% − 4% = 2%. So the minimum ending value is ₹10,000 × (1 + 2%) = ₹10,200."},</p>
+<p class="p1">];</p>
+<p class="p2"><br></p>
+<p class="p1">let practiceDone = false;</p>
+<p class="p2"><br></p>
+<p class="p1">function submitPractice(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const alloc = getAlloc("prac");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(allocTotal(alloc) !== ENDOWMENT){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateAllocTotal("prac");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("err-block3").style.display="block";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("err-block3").textContent="Practice round allocations must sum to exactly ₹10,000.";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("err-block3").style.display="none";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const {portfolio, breakdown} = calcReturn(alloc);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const resultEl = document.getElementById("prac-result");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const retClass = portfolio&gt;0?"ret-pos":portfolio&lt;0?"ret-neg":"ret-zero";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const assetRows = Object.entries(ASSETS).map(([k,a])=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const amt<span class="Apple-converted-space">  </span>= alloc[k]||0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const draw = breakdown[k]?.draw??0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(amt===0) return "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return `&lt;tr&gt;&lt;td&gt;${a.label}&lt;/td&gt;&lt;td style="text-align:right"&gt;${fmtINR(amt)}&lt;/td&gt;&lt;td style="text-align:center"&gt;${fmt(draw)}&lt;/td&gt;&lt;td style="text-align:right"&gt;${fmtINR(amt*(1+draw/100))}&lt;/td&gt;&lt;/tr&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}).filter(Boolean).join("");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>resultEl.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="background:var(--off);border-radius:10px;padding:16px;border:1.5px solid var(--light)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-label" style="margin:0 0 10px"&gt;Practice Round Results&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;table class="inst-table" style="margin:0 0 12px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Asset&lt;/th&gt;&lt;th&gt;Allocated&lt;/th&gt;&lt;th&gt;Return&lt;/th&gt;&lt;th&gt;Ending Value&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tbody&gt;${assetRows}&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="font-size:15px;font-weight:600"&gt;Portfolio Return: &lt;span class="${retClass}"&gt;${fmt(portfolio)}&lt;/span&gt; &amp;nbsp;|&amp;nbsp; Ending Value: &lt;strong&gt;${fmtINR(ENDOWMENT*(1+portfolio/100))}&lt;/strong&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>resultEl.style.display="block";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("prac-btn").style.display="none";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>practiceDone = true;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>showCompQ(1);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function showCompQ(num){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cq<span class="Apple-converted-space">  </span>= compQs[num-1];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const wrap = document.getElementById("comp-q-wrap");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>wrap.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="q-block" style="margin-top:16px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-label"&gt;&lt;span class="q-num"&gt;Q${num} of 3&lt;/span&gt;${cq.q}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>${radioOpts(`comp_ans`, cq.opts)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("comp-section").style.display="block";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("comp-explanation").style.display="none";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("comp-correct").style.display="none";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("comp-next-btn").textContent = "Check Answer →";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.compQuestion = num;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitComp(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ans <span class="Apple-converted-space">  </span>= getChecked("comp_ans");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cq<span class="Apple-converted-space">    </span>= compQs[state.compQuestion-1];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!ans){ document.getElementById("err-comp").style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("err-comp").style.display="none";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(ans === cq.correct){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("comp-correct").style.display="block";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("comp-next-btn").textContent = "Proceed to Study →";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("comp-next-btn").onclick = ()=&gt;goSection("block4");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("block3-nav").style.display="flex";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("comp-explanation").textContent = "Not quite. " + cq.expl;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("comp-explanation").style.display="block";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(state.compQuestion &lt; 3){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(()=&gt;showCompQ(state.compQuestion+1), 1200);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// All 3 failed</p>
+<p class="p1"><span class="Apple-converted-space">      </span>state.compAttempts++;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(state.compAttempts &lt; 2){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("comp-explanation").textContent += " Let's go back to the instructions.";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">          </span>state.compQuestion = 1;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>goSection("block3");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, 2000);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Cap reached — allow proceed</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("comp-next-btn").textContent = "Continue to Study →";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("comp-next-btn").onclick = ()=&gt;goSection("block4");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("block3-nav").style.display="flex";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitBlock4(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(state.condition === "LuckReflect"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const checked = document.querySelectorAll("#ref-goals input:checked");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(checked.length !== 2){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("err-ref").style.display="block"; return;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>state.answers.ref_goals = Array.from(checked).map(c=&gt;c.value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>saveBlock("B4_Treatment",{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>condition:<span class="Apple-converted-space">    </span>state.condition,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>conditionNum: state.conditionNum,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>ref_goals:<span class="Apple-converted-space">    </span>state.answers.ref_goals||null</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("block5");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitBlock5(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const vals = [];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for(let i=0;i&lt;10;i++){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const v = getChecked(`hl_${i}`);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(!v){ document.getElementById("err-block5").style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>vals.push(v);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("err-block5").style.display="none";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const switch_row = vals.findIndex((v,i)=&gt;v==="B"&amp;&amp;(i===0||vals[i-1]==="A"))+1 || 10;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const d = {hl_responses: vals.join(","), hl_switch: switch_row};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.answers.block5 = d;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>saveBlock("B5_HoltLaury", d);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("block6");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitRound(num, next){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const alloc = getAlloc("R"+num);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(allocTotal(alloc) !== ENDOWMENT){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById(`err-round${num}`).style.display="block"; return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(`err-round${num}`).style.display="none";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.allocs["R"+num] = alloc;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const hiRisk = ((alloc.H||0)+(alloc.V||0))/ENDOWMENT;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cashShare = (alloc.cash||0)/ENDOWMENT;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>saveBlock(`B_Round${num}`, {...alloc, hi_risk_share:hiRisk.toFixed(4), cash_share:cashShare.toFixed(4)});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection(next);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitBlock8(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const val = document.getElementById("belief-slider").value;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.answers.belief = parseInt(val);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>saveBlock("B8_Belief", {belief: val});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("block9");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function submitBlock10(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const bfi = [], sco = [];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for(let i=0;i&lt;10;i++){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const v = getChecked(`bfi_${i}`);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(!v){ document.getElementById("err-block10").style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bfi.push(v);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for(let i=0;i&lt;11;i++){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const v = getChecked(`sco_${i}`);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(!v){ document.getElementById("err-block10").style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sco.push(v);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const mc1 = getChecked("mc1");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!mc1){ document.getElementById("err-block10").style.display="block"; return; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("err-block10").style.display="none";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const d = {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bfi: bfi.join(","), sco: sco.join(","), mc1,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bfi_extraversion: <span class="Apple-converted-space">    </span>((6-parseInt(bfi[0]))+parseInt(bfi[5]))/2,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bfi_agreeableness:<span class="Apple-converted-space">    </span>(parseInt(bfi[1])+(6-parseInt(bfi[6])))/2,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bfi_conscientiousness:((6-parseInt(bfi[2]))+parseInt(bfi[7]))/2,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bfi_neuroticism:<span class="Apple-converted-space">      </span>((6-parseInt(bfi[3]))+parseInt(bfi[8]))/2,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>bfi_openness: <span class="Apple-converted-space">        </span>((6-parseInt(bfi[4]))+parseInt(bfi[9]))/2,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>sco_mean: <span class="Apple-converted-space">            </span>(sco.map((v,i)=&gt;[4,10].includes(i)?6-parseInt(v):parseInt(v)).reduce((a,b)=&gt;a+b,0)/11).toFixed(3),</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>state.answers.block10 = d;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>saveBlock("B10_Personality", d);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>randomPayRound();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>goSection("block11");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function toggleGoal(idx, el){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const checked = document.querySelectorAll("#ref-goals input:checked").length;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cb = document.getElementById(`ref_${idx}`);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(cb.checked){ cb.checked=false; el.classList.remove("selected"); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>else if(checked &lt; 2){ cb.checked=true; el.classList.add("selected"); }</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// ATTACH HANDLERS (called after each render)</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">function attachHandlers(sec){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Show/hide CAT/GMAT blocks</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(sec==="block1"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll("input[name='b1_exam']").forEach(el=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>el.addEventListener("change",()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("cat-block").style.display = el.value==="1"?"block":"none";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("gmat-block").style.display = el.value==="2"?"block":"none";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Alloc live update</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(["block6","block7","block9"].includes(sec)){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rMap = {block6:"R1",block7:"R2",block9:"R3"};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const round = rMap[sec];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll(`input[id^='${round}_']`).forEach(el=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>el.addEventListener("input",()=&gt;updateAllocTotal(round));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(sec==="block3"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll("input[id^='prac_']").forEach(el=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>el.addEventListener("input",()=&gt;updateAllocTotal("prac"));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Block 11 — save results</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(sec==="block11"){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const returns = state.returns || [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const savePayload = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pay_round: state.payRound,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>r1_portfolio: returns[0]?.portfolio?.toFixed(2),</p>
+<p class="p1"><span class="Apple-converted-space">      </span>r2_portfolio: returns[1]?.portfolio?.toFixed(2),</p>
+<p class="p1"><span class="Apple-converted-space">      </span>r3_portfolio: returns[2]?.portfolio?.toFixed(2),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>saveBlock("B11_Returns", savePayload);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">// INIT</p>
+<p class="p1">// ═══════════════════════════════════════════════════════════════════════════</p>
+<p class="p1">render();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
