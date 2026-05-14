@@ -530,26 +530,24 @@ function updateAllocTotal(round){
 // ═══════════════════════════════════════════════════════════════════════════
 // DATA SUBMISSION
 // ═══════════════════════════════════════════════════════════════════════════
-async function saveData(payload){
-  if(!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbwRXzbPZx6uybnf_6-kA42f-Qkc462TSkAnY0ltIQQMz07JsYSBss6XbmG2MJqN_C-Fqw/exec")){
+async function saveData(payload) {
+  if (!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbwRXzbPZx6uybnf_6-kA42f-Qkc462TSkAnY0ltIQQMz07JsYSBss6XbmG2MJqN_C-Fqw/exec")) {
     console.warn("No Google Script URL configured — data not saved");
     return;
   }
-  // Use URL parameters via GET — avoids all CORS preflight issues with Apps Script
-  try{
+  document.getElementById("loading").style.display = "flex";
+  try {
     const params = new URLSearchParams({ data: JSON.stringify(payload) });
-    const url    = CONFIG.SCRIPT_URL + "?" + params.toString();
-    // Use an invisible image trick — fully CORS-free, no preflight
-    const img = new Image();
-    img.src = url;
-    // Also try fetch in no-cors mode as backup
-    fetch(CONFIG.SCRIPT_URL, {
-      method:  "POST",
-      mode:    "no-cors",
-      headers: {"Content-Type":"text/plain"},
-      body:    JSON.stringify(payload)
-    }).catch(()=>{});
-  } catch(e){ console.error("Save error:", e); }
+    await fetch(CONFIG.SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: params,
+    });
+  } catch(e) {
+  console.error("Save error:", e);
+  alert("⚠️ Your response could not be saved. Please check your connection and try again.");
+}
+  finally { document.getElementById("loading").style.display = "none"; }
 }
 
 async function saveBlock(blockName, data){
