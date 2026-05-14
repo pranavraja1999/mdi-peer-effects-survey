@@ -531,10 +531,11 @@ function updateAllocTotal(round){
 // DATA SUBMISSION
 // ═══════════════════════════════════════════════════════════════════════════
 async function saveData(payload) {
-  if (!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbwRXzbPZx6uybnf_6-kA42f-Qkc462TSkAnY0ltIQQMz07JsYSBss6XbmG2MJqN_C-Fqw/exec")) {
+  // ✅ CORRECT — blocks only when the placeholder is still present
+if (!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbwRXzbPZx6uybnf_6-kA42f-Qkc462TSkAnY0ltIQQMz07JsYSBss6XbmG2MJqN_C-Fqw/exec")) {
     console.warn("No Google Script URL configured — data not saved");
     return;
-  }
+}
   document.getElementById("loading").style.display = "flex";
   try {
     const params = new URLSearchParams({ data: JSON.stringify(payload) });
