@@ -532,7 +532,7 @@ function updateAllocTotal(round){
 // ═══════════════════════════════════════════════════════════════════════════
 async function saveData(payload) {
   // ✅ CORRECT — blocks only when the placeholder is still present
-if (!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbyoB32_8ysHUrPXHCEnF1uRr-RHDc5fEFnzv082DqJnBCHwJnt4c61NLW7zsaV6CVpIZw/exec")) {
+if (!CONFIG.SCRIPT_URL || CONFIG.SCRIPT_URL.includes("YOUR_SCRIPT_ID")) {
     console.warn("No Google Script URL configured — data not saved");
     return;
 }
